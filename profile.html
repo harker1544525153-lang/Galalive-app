@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 个人中心</title>
+        <link rel="stylesheet" href="css/profile.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="action">🔔</div>
+        <div class="title">我的</div>
+        <div class="action">⚙</div>
+    </div>
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <div class="avatar">
+            G
+            <span class="level-badge">Lv.5</span>
+        </div>
+        <div class="profile-info">
+            <div class="name">
+                GALA_USER
+                <span class="vip">VIP</span>
+            </div>
+            <div class="id">ID: 100086</div>
+            <div class="bio">🌟 直播爱好者 | 喜欢唱歌跳舞</div>
+        </div>
+        <div class="edit-btn" onclick="showToast('编辑资料')">✎</div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row">
+        <div class="stat-item">
+            <div class="num follow">128</div>
+            <div class="label">关注</div>
+        </div>
+        <div class="stat-item">
+            <div class="num fans">2,356</div>
+            <div class="label">粉丝</div>
+        </div>
+        <div class="stat-item">
+            <div class="num diamond">8,888</div>
+            <div class="label">钻石</div>
+        </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="achievements">
+        <div class="achievement-icons">
+            <span class="ach-icon">👑</span>
+            <span class="ach-icon">🏆</span>
+            <span class="ach-icon">🎤</span>
+            <span class="ach-icon locked">⭐</span>
+            <span class="ach-icon locked">💎</span>
+            <span class="ach-more">全部成就 →</span>
+        </div>
+    </div>
+
+    <!-- Menu Group 1: Core -->
+    <div class="menu-section">
+        <div class="menu-group">
+            <div class="menu-item" onclick="navigateTo('orders')">
+                <span class="menu-icon">📋</span>
+                <span class="menu-label">我的订单</span>
+                <span class="menu-extra"><span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('wallet')">
+                <span class="menu-icon">💳</span>
+                <span class="menu-label">我的钱包</span>
+                <span class="menu-extra">1,234 💎 <span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('history')">
+                <span class="menu-icon">⏱</span>
+                <span class="menu-label">观看历史</span>
+                <span class="menu-extra"><span class="arrow">→</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Group 2: Social -->
+    <div class="menu-section">
+        <div class="menu-group">
+            <div class="menu-item" onclick="navigateTo('following')">
+                <span class="menu-icon">❤</span>
+                <span class="menu-label">我的关注</span>
+                <span class="menu-extra">128 人 <span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('fans')">
+                <span class="menu-icon">👥</span>
+                <span class="menu-label">粉丝列表</span>
+                <span class="menu-extra">2,356 人 <span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('visitors')">
+                <span class="menu-icon">👀</span>
+                <span class="menu-label">访客记录</span>
+                <span class="menu-extra"><span class="arrow">→</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Group 3: Host -->
+    <div class="menu-section">
+        <div class="menu-group">
+            <div class="menu-item" onclick="navigateTo('host')">
+                <span class="menu-icon">🎙</span>
+                <span class="menu-label">主播中心</span>
+                <span class="menu-extra">收益分析 <span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('verify')">
+                <span class="menu-icon">🪪</span>
+                <span class="menu-label">实名认证</span>
+                <span class="menu-extra"><span style="color:#FFD700;">●</span> 已认证 <span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('stats')">
+                <span class="menu-icon">📊</span>
+                <span class="menu-label">直播数据</span>
+                <span class="menu-extra"><span class="arrow">→</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Group 4: Settings -->
+    <div class="menu-section">
+        <div class="menu-group">
+            <div class="menu-item" onclick="navigateTo('settings')">
+                <span class="menu-icon">⚙</span>
+                <span class="menu-label">设置</span>
+                <span class="menu-extra"><span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('help')">
+                <span class="menu-icon">❓</span>
+                <span class="menu-label">帮助与反馈</span>
+                <span class="menu-extra"><span class="arrow">→</span></span>
+            </div>
+            <div class="menu-item" onclick="navigateTo('about')">
+                <span class="menu-icon">ℹ</span>
+                <span class="menu-label">关于 GALA LIVE</span>
+                <span class="menu-extra">v1.2.0 <span class="arrow">→</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'following.html')">
+            <span class="tab-icon">❤</span>
+            关注
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+            <span class="badge"></span>
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+    <script src="js/profile.js"></script>
+
+</body>
+</html>

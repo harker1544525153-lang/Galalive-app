@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 关于</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif; background:#0D0D0D; color:#fff; min-height:100vh; }
+        .app { max-width:390px; margin:0 auto; min-height:100vh; position:relative; padding-bottom:80px; }
+        .header { padding:16px; padding-top:50px; display:flex; align-items:center; gap:12px; }
+        .back-btn { font-size:24px; cursor:pointer; }
+        .header-title { font-size:18px; font-weight:700; }
+        .content { padding:20px 16px; text-align:center; }
+        .logo { width:80px; height:80px; background:linear-gradient(135deg,#FF4D6D,#FF8FA3); border-radius:20px; display:flex; align-items:center; justify-content:center; font-size:32px; font-weight:700; margin:0 auto 16px; }
+        .app-name { font-size:24px; font-weight:700; margin-bottom:4px; }
+        .version { font-size:14px; color:rgba(255,255,255,0.4); margin-bottom:32px; }
+        .info-list { background:#1A1A1A; border-radius:12px; overflow:hidden; margin-bottom:16px; }
+        .info-item { display:flex; justify-content:space-between; align-items:center; padding:14px 16px; border-bottom:0.5px solid rgba(255,255,255,0.05); }
+        .info-item:last-child { border-bottom:none; }
+        .info-label { font-size:14px; color:rgba(255,255,255,0.6); }
+        .info-value { font-size:14px; }
+        .copyright { font-size:12px; color:rgba(255,255,255,0.3); margin-top:24px; }
+        .bottom-tab { position:fixed; bottom:0; left:50%; transform:translateX(-50%); width:100%; max-width:390px; height:64px; background:rgba(13,13,13,0.95); backdrop-filter:blur(10px); border-top:0.5px solid rgba(255,255,255,0.1); display:flex; justify-content:space-around; align-items:center; padding-bottom:8px; z-index:100; }
+        .tab-item { display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer; color:rgba(255,255,255,0.4); font-size:10px; transition:color 0.3s; }
+        .tab-item .tab-icon { font-size:22px; }
+        .tab-item.active { color:#FF4D6D; }
+    </style>
+</head>
+<body>
+<div class="app">
+    <div class="header">
+        <div class="back-btn" onclick="goBack()">←</div>
+        <div class="header-title">关于 GALA LIVE</div>
+    </div>
+    <div class="content">
+        <div class="logo">G</div>
+        <div class="app-name">GALA LIVE</div>
+        <div class="version">版本 v1.2.0</div>
+        <div class="info-list">
+            <div class="info-item">
+                <span class="info-label">官方网站</span>
+                <span class="info-value">www.galalive.com</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">联系邮箱</span>
+                <span class="info-value">support@galalive.com</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">用户协议</span>
+                <span class="info-value" style="color:#FF4D6D;">查看</span>
+            </div>
+            <div class="info-item">
+                <span class="info-label">隐私政策</span>
+                <span class="info-value" style="color:#FF4D6D;">查看</span>
+            </div>
+        </div>
+        <div class="copyright">2024 GALA LIVE. All Rights Reserved.</div>
+    </div>
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')"><span class="tab-icon">🏠</span>首页</div>
+        <div class="tab-item" onclick="navigate(this,'following.html')"><span class="tab-icon">❤</span>关注</div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')"><span class="tab-icon">💬</span>消息</div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')"><span class="tab-icon">👤</span>我的</div>
+    </div>
+</div>
+<script>
+    function goBack() { window.location.href = 'profile.html'; }
+    function navigate(el, page) {
+        document.querySelectorAll('.tab-item').forEach(t=>t.classList.remove('active'));
+        el.classList.add('active');
+        window.location.href = page;
+    }
+</script>
+</body>
+</html>

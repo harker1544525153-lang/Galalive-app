@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 排行榜</title>
+        <link rel="stylesheet" href="css/ranking.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-title">🏆 排行榜</div>
+        <div class="header-desc">看看谁是今天的人气王！</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this)">💰 收入榜</div>
+        <div class="tab" onclick="switchTab(this)">💎 消费榜</div>
+        <div class="tab" onclick="switchTab(this)">⭐ 贡献榜</div>
+    </div>
+
+    <!-- Top 3 -->
+    <div class="top3">
+        <div class="rank-card rank2">
+            <div class="rank-badge rank2">2</div>
+            <div class="rank-avatar">🎵</div>
+            <div class="rank-name">小明</div>
+            <div class="rank-value">💎 8,500</div>
+        </div>
+        <div class="rank-card rank1">
+            <div class="rank-badge rank1">1</div>
+            <div class="rank-avatar">🌺</div>
+            <div class="rank-name">小红</div>
+            <div class="rank-value">💎 12,500</div>
+        </div>
+        <div class="rank-card rank3">
+            <div class="rank-badge rank3">3</div>
+            <div class="rank-avatar">👑</div>
+            <div class="rank-name">小月</div>
+            <div class="rank-value">💎 6,800</div>
+        </div>
+    </div>
+
+    <!-- List -->
+    <div class="list-section">
+        <div class="list-item">
+            <div class="list-rank">4</div>
+            <div class="list-avatar">🎮</div>
+            <div class="list-info">
+                <div class="list-name">小芳</div>
+                <div class="list-desc">游戏主播 · 今日收益</div>
+            </div>
+            <div class="list-value">💎 5,200</div>
+        </div>
+        <div class="list-item">
+            <div class="list-rank">5</div>
+            <div class="list-avatar">🎸</div>
+            <div class="list-info">
+                <div class="list-name">阿杰</div>
+                <div class="list-desc">才艺主播 · 今日收益</div>
+            </div>
+            <div class="list-value">💎 4,100</div>
+        </div>
+        <div class="list-item">
+            <div class="list-rank">6</div>
+            <div class="list-avatar">🌟</div>
+            <div class="list-info">
+                <div class="list-name">小婷</div>
+                <div class="list-desc">新人主播 · 今日收益</div>
+            </div>
+            <div class="list-value">💎 3,500</div>
+        </div>
+        <div class="list-item">
+            <div class="list-rank">7</div>
+            <div class="list-avatar">💃</div>
+            <div class="list-info">
+                <div class="list-name">小丽</div>
+                <div class="list-desc">舞蹈主播 · 今日收益</div>
+            </div>
+            <div class="list-value">💎 2,800</div>
+        </div>
+        <div class="list-item">
+            <div class="list-rank">8</div>
+            <div class="list-avatar">🎤</div>
+            <div class="list-info">
+                <div class="list-name">小华</div>
+                <div class="list-desc">唱歌主播 · 今日收益</div>
+            </div>
+            <div class="list-value">💎 2,200</div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/ranking.js"></script>
+
+</body>
+</html>

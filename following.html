@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 关注</title>
+        <link rel="stylesheet" href="css/following.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="action"></div>
+        <div class="title">关注</div>
+        <div class="action">管理</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this,'all')">全部</div>
+        <div class="tab" onclick="switchTab(this,'live')">直播中</div>
+    </div>
+
+    <!-- User List -->
+    <div class="user-list" id="userList">
+        <div class="user-card">
+            <div class="user-avatar">🌺</div>
+            <div class="user-info">
+                <div class="user-name">
+                    小红
+                    <span class="live-tag">直播中</span>
+                </div>
+                <div class="user-desc">今日直播第3场 · 已有1.2w观看</div>
+            </div>
+            <button class="follow-btn following">已关注</button>
+        </div>
+        <div class="user-card">
+            <div class="user-avatar">🎵</div>
+            <div class="user-info">
+                <div class="user-name">
+                    小明
+                    <span class="live-tag">直播中</span>
+                </div>
+                <div class="user-desc">今日直播第1场 · 已有8.5k观看</div>
+            </div>
+            <button class="follow-btn following">已关注</button>
+        </div>
+        <div class="user-card">
+            <div class="user-avatar">🎮</div>
+            <div class="user-info">
+                <div class="user-name">小芳</div>
+                <div class="user-desc">2小时前直播过</div>
+            </div>
+            <button class="follow-btn following">已关注</button>
+        </div>
+        <div class="user-card">
+            <div class="user-avatar">👑</div>
+            <div class="user-info">
+                <div class="user-name">小月</div>
+                <div class="user-desc">1天前直播过</div>
+            </div>
+            <button class="follow-btn following">已关注</button>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'following.html')">
+            <span class="tab-icon">❤</span>
+            关注
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/following.js"></script>
+
+</body>
+</html>

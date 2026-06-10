@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 粉丝列表</title>
+        <link rel="stylesheet" href="css/fans.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="back-btn" onclick="goBack()">←</div>
+            <div class="header-title">👥 粉丝列表</div>
+            <div style="width:24px;"></div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this)">全部</div>
+        <div class="tab" onclick="switchTab(this)">新增</div>
+        <div class="tab" onclick="switchTab(this)">常互动</div>
+    </div>
+
+    <!-- User List -->
+    <div class="user-list">
+        <div class="user-item">
+            <div class="user-avatar">🦊</div>
+            <div class="user-info">
+                <div class="user-name">快乐小兔</div>
+                <div class="user-desc">2小时前关注了您</div>
+            </div>
+            <button class="follow-btn followed" onclick="toggleFollow(this)">已回关</button>
+        </div>
+
+        <div class="user-item">
+            <div class="user-avatar">🐻</div>
+            <div class="user-info">
+                <div class="user-name">阳光小熊</div>
+                <div class="user-desc">3小时前关注了您</div>
+            </div>
+            <button class="follow-btn follow" onclick="toggleFollow(this)">回关</button>
+        </div>
+
+        <div class="user-item">
+            <div class="user-avatar">🐱</div>
+            <div class="user-info">
+                <div class="user-name">可爱猫咪</div>
+                <div class="user-desc">昨天关注了您</div>
+            </div>
+            <button class="follow-btn followed" onclick="toggleFollow(this)">已回关</button>
+        </div>
+
+        <div class="user-item">
+            <div class="user-avatar">🐶</div>
+            <div class="user-info">
+                <div class="user-name">忠诚小狗</div>
+                <div class="user-desc">3天前关注了您</div>
+            </div>
+            <button class="follow-btn follow" onclick="toggleFollow(this)">回关</button>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/fans.js"></script>
+
+</body>
+</html>

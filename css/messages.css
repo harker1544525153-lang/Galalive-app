@@ -1,0 +1,42 @@
+*,*::before,*::after{box-sizing:border-box;}*{margin:0;padding:0;}
+        body { margin:0; padding:0; min-height:100vh; overflow-x:hidden; font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif; background:#0D0D0D; color:#fff; display:flex; justify-content:center; }
+        .app { width: 390px; max-width:100vw; margin:0 auto; min-height:812px; padding-bottom:80px; }
+        /* Top Bar */
+        .top-bar { display:flex; align-items:center; height:48px; padding:0 16px; }
+        .top-bar .title { flex:1; text-align:center; font-size:16px; font-weight:600; }
+        .top-bar .action { font-size:13px; color:rgba(255,255,255,0.5); cursor:pointer; }
+        /* Tabs */
+        .msg-tabs { display:flex; padding:0 16px; gap:8px; height:44px; align-items:center; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+        .msg-tabs::-webkit-scrollbar { display:none; }
+        .msg-tab { font-size:13px; color:rgba(255,255,255,0.5); cursor:pointer; padding:6px 14px; border-radius:16px; transition:all 0.3s; white-space:nowrap; }
+        .msg-tab.active { background:#FF4D6D; color:#fff; font-weight:600; }
+        /* Message List */
+        .msg-list { padding:8px 16px; }
+        .msg-item { display:flex; align-items:center; gap:12px; padding:14px 0; cursor:pointer; transition:background 0.2s; border-bottom:0.5px solid rgba(255,255,255,0.05); }
+        .msg-item:active { background:rgba(255,255,255,0.02); }
+        .msg-item:last-child { border-bottom:none; }
+        .msg-avatar { width:52px; height:52px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:600; position:relative; }
+        .msg-avatar .online-dot { position:absolute; bottom:1px; right:1px; width:12px; height:12px; background:#00D9FF; border-radius:50%; border:2px solid #0D0D0D; }
+        .msg-content { flex:1; min-width:0; }
+        .msg-content .top-row { display:flex; align-items:center; gap:8px; margin-bottom:4px; }
+        .msg-content .top-row .name { font-size:15px; font-weight:600; }
+        .msg-content .top-row .time { font-size:11px; color:rgba(255,255,255,0.3); margin-left:auto; flex-shrink:0; }
+        .msg-content .top-row .vip-tag { font-size:9px; background:linear-gradient(135deg,#7B2CBF,#FF4D6D); padding:1px 6px; border-radius:6px; color:#fff; font-weight:600; }
+        .msg-content .bottom-row { display:flex; align-items:center; gap:8px; }
+        .msg-content .bottom-row .preview { font-size:13px; color:rgba(255,255,255,0.4); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1; }
+        .msg-content .bottom-row .badge { background:#FF4444; color:#fff; font-size:10px; padding:1px 6px; border-radius:8px; min-width:18px; text-align:center; flex-shrink:0; }
+        .msg-content .bottom-row .pin-icon { color:#FFD700; font-size:12px; }
+        /* System Message */
+        .system-msg-item .msg-avatar { background:linear-gradient(135deg,#FF4D6D,#FF8FA3); }
+        .user-msg-item .msg-avatar { background:linear-gradient(135deg,#7B2CBF,#00D9FF); }
+        /* Empty State */
+        .empty-state { display:flex; flex-direction:column; align-items:center; padding:60px 0; }
+        .empty-state .icon { font-size:56px; margin-bottom:12px; opacity:0.3; }
+        .empty-state .text { font-size:14px; color:rgba(255,255,255,0.4); }
+        .empty-state .sub { font-size:12px; color:rgba(255,255,255,0.25); margin-top:4px; }
+        /* Bottom Tab */
+        .bottom-tab { position:fixed; bottom:0; left:50%; transform:translateX(-50%); width:100%; width: 390px; height:64px; background:rgba(13,13,13,0.95); backdrop-filter:blur(10px); border-top:0.5px solid rgba(255,255,255,0.1); display:flex; justify-content:space-around; align-items:center; padding-bottom:8px; z-index:100; }
+        .tab-item { display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer; color:rgba(255,255,255,0.4); font-size:10px; transition:color 0.3s; position:relative; }
+        .tab-item .tab-icon { font-size:22px; }
+        .tab-item.active { color:#FF4D6D; }
+        .tab-item .badge { position:absolute; top:-2px; right:-6px; width:8px; height:8px; background:#FF4444; border-radius:50%; }

@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 首页</title>
+        <link rel="stylesheet" href="css/home.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="search-bar">
+            <span class="icon">🔍</span>
+            <input type="text" placeholder="搜索用户名/ID">
+        </div>
+        <div class="diamond">1,000</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this)">🔥 热门</div>
+        <div class="tab" onclick="switchTab(this)">❤ 关注</div>
+        <div class="tab" onclick="switchTab(this)">⏰ 最新</div>
+        <div class="tab-more">分类 ▾</div>
+    </div>
+
+    <!-- Banner -->
+    <div class="banner-wrap">
+        <div class="banner">🔥 热门推荐 · 精彩直播等你发现</div>
+        <div class="banner-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <!-- Content Area -->
+    <div class="section" id="hotSection">
+        <div class="section-header">
+            <span class="section-title">🔥 热门推荐</span>
+            <span class="section-more">查看更多 →</span>
+        </div>
+        <div class="live-grid">
+            <div class="live-card" onclick="goLive('room1')">
+                <div class="live-card-cover" style="background:linear-gradient(135deg,#2A1A2A,#1A1A2E);">
+                    <span class="tag">🔥 热门</span>
+                    <div class="viewers">1.2w</div>
+                </div>
+                <div class="live-card-info">
+                    <div class="name">🌺 小红</div>
+                    <div class="desc">今天给大家唱首歌~</div>
+                    <div class="earn">💎 今日收益: 500</div>
+                </div>
+            </div>
+            <div class="live-card" onclick="goLive('room2')">
+                <div class="live-card-cover" style="background:linear-gradient(135deg,#1A2A2A,#0D1A1A);">
+                    <span class="tag">🎤 才艺</span>
+                    <div class="viewers">8.5k</div>
+                </div>
+                <div class="live-card-info">
+                    <div class="name">🎵 小明</div>
+                    <div class="desc">才艺表演中...</div>
+                    <div class="earn">💎 今日收益: 320</div>
+                </div>
+            </div>
+            <div class="live-card" onclick="goLive('room3')">
+                <div class="live-card-cover" style="background:linear-gradient(135deg,#2A1A1A,#1A0D0D);">
+                    <span class="tag">🎮 游戏</span>
+                    <div class="viewers">5.2k</div>
+                </div>
+                <div class="live-card-info">
+                    <div class="name">🎮 小芳</div>
+                    <div class="desc">带大家上分！</div>
+                    <div class="earn">💎 今日收益: 280</div>
+                </div>
+            </div>
+            <div class="live-card" onclick="goLive('room4')">
+                <div class="live-card-cover" style="background:linear-gradient(135deg,#1A1A2A,#0D0D1A);">
+                    <span class="tag">💃 女神</span>
+                    <div class="viewers">3.8k</div>
+                </div>
+                <div class="live-card-info">
+                    <div class="name">👑 小月</div>
+                    <div class="desc">聊天互动中~</div>
+                    <div class="earn">💎 今日收益: 450</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Follow Section (hidden by default) -->
+    <div class="section" id="followSection" style="display:none;">
+        <div class="empty-state">
+            <div class="icon">😊</div>
+            <div class="text">还没有关注的主播</div>
+            <div class="sub">去发现更多有趣的主播吧~</div>
+            <button class="empty-btn" onclick="switchToHot()">去热门看看</button>
+        </div>
+    </div>
+
+    <!-- Latest Section (hidden by default) -->
+    <div class="section" id="latestSection" style="display:none;">
+        <div class="section-header">
+            <span class="section-title">⏰ 最新开播</span>
+        </div>
+        <div class="live-grid">
+            <div class="live-card" onclick="goLive('room5')">
+                <div class="live-card-cover" style="background:linear-gradient(135deg,#2A2A1A,#1A1A0D);">
+                    <span class="tag">🆕 刚刚</span>
+                    <div class="viewers">156</div>
+                </div>
+                <div class="live-card-info">
+                    <div class="name">🌟 小婷</div>
+                    <div class="desc">新人首播，多多关照~</div>
+                    <div class="earn">💎 今日收益: 50</div>
+                </div>
+            </div>
+            <div class="live-card" onclick="goLive('room6')">
+                <div class="live-card-cover" style="background:linear-gradient(135deg,#1A2A1A,#0D1A0D);">
+                    <span class="tag">🆕 3分钟</span>
+                    <div class="viewers">89</div>
+                </div>
+                <div class="live-card-info">
+                    <div class="name">🎸 阿杰</div>
+                    <div class="desc">吉他弹唱主播</div>
+                    <div class="earn">💎 今日收益: 20</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item active" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'following.html')">
+            <span class="tab-icon">❤</span>
+            关注
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+            <span class="badge"></span>
+        </div>
+        <div class="tab-item" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/home.js"></script>
+
+</body>
+</html>

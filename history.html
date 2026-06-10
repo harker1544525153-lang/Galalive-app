@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 观看历史</title>
+        <link rel="stylesheet" href="css/history.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="back-btn" onclick="goBack()">←</div>
+            <div class="header-title">📺 观看历史</div>
+            <div class="edit-btn">编辑</div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this)">直播</div>
+        <div class="tab" onclick="switchTab(this)">视频</div>
+    </div>
+
+    <!-- History List -->
+    <div class="history-list">
+        <div class="history-item">
+            <div class="history-cover">🎙️</div>
+            <div class="history-info">
+                <div class="history-title">【开播啦】新主播上线求关注~</div>
+                <div class="history-anchor">主播小美</div>
+                <div class="history-time">今天 14:30 观看 15分钟</div>
+            </div>
+        </div>
+
+        <div class="history-item">
+            <div class="history-cover">🎵</div>
+            <div class="history-info">
+                <div class="history-title">【音乐】经典老歌合集</div>
+                <div class="history-anchor">音乐王子</div>
+                <div class="history-time">昨天 20:00 观看 45分钟</div>
+            </div>
+        </div>
+
+        <div class="history-item">
+            <div class="history-cover">🎮</div>
+            <div class="history-info">
+                <div class="history-title">【游戏】王者荣耀上分日记</div>
+                <div class="history-anchor">游戏达人</div>
+                <div class="history-time">2024-06-04 18:00 观看 1小时</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/history.js"></script>
+
+</body>
+</html>

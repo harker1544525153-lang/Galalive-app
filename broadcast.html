@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 开始直播</title>
+        <link rel="stylesheet" href="css/broadcast.css">
+
+</head>
+<body>
+<div class="app">
+    <div class="top-bar">
+        <div class="back" onclick="goHome()">‹</div>
+        <div class="title">开始直播</div>
+        <div class="help">? 帮助</div>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover-area">
+        <div class="cover-box" onclick="showToast('选择封面图片')">
+            <div class="icon">📷</div>
+            <div class="text">点击上传封面</div>
+            <div class="sub">建议 750×1000 像素</div>
+        </div>
+    </div>
+
+    <!-- Title -->
+    <div class="form-group">
+        <label>直播标题</label>
+        <input type="text" id="titleInput" placeholder="请输入直播标题 (5-30字)" maxlength="30">
+    </div>
+
+    <!-- Category -->
+    <div class="form-group">
+        <label>直播分类</label>
+        <div class="categories">
+            <span class="cat-tag selected" onclick="selectCat(this)">🎤 才艺</span>
+            <span class="cat-tag" onclick="selectCat(this)">💃 女神</span>
+            <span class="cat-tag" onclick="selectCat(this)">🎮 娱乐</span>
+            <span class="cat-tag" onclick="selectCat(this)">🎮 游戏</span>
+            <span class="cat-tag" onclick="selectCat(this)">🌿 生活</span>
+            <span class="cat-tag" onclick="selectCat(this)">🎵 音乐</span>
+            <span class="cat-tag" onclick="selectCat(this)">🗣 聊天</span>
+        </div>
+    </div>
+
+    <!-- Private Mode -->
+    <div class="form-group">
+        <div class="switch-row">
+            <span class="label">🔒 开启私密直播</span>
+            <div class="switch" onclick="togglePrivate(this)">
+                <div class="knob"></div>
+            </div>
+            <div class="pwd-input" id="pwdInput">
+                <input type="text" placeholder="4-6位密码" maxlength="6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Agreement -->
+    <div class="agreement">
+        <input type="checkbox" id="agree" checked>
+        <label for="agree">我已阅读并同意 <a href="#">《直播规范》</a></label>
+    </div>
+
+    <!-- Start -->
+    <button class="start-btn" onclick="startLive()">开 始 直 播</button>
+</div>
+
+<!-- Live Page -->
+<div class="live-page" id="livePage">
+    <div class="live-header">
+        <div class="stats">
+            <span>👁 0</span>
+            <span>💎 今日收益: 0</span>
+        </div>
+        <button class="end-btn" onclick="endLive()">🔴 结束直播</button>
+    </div>
+    <div class="live-video">
+        <div class="tip">📷 摄像头预览区域</div>
+    </div>
+    <div class="live-bottom">
+        <div class="live-action" title="美颜">✨</div>
+        <div class="live-action" title="摄像头切换">🔄</div>
+        <div class="live-action" title="麦克风">🎤</div>
+        <div class="live-action" title="消息">💬</div>
+        <div class="live-action" title="更多">⋮</div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+    <script src="js/broadcast.js"></script>
+
+</body>
+</html>

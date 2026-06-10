@@ -1,0 +1,46 @@
+*,*::before,*::after{box-sizing:border-box;}*{margin:0;padding:0;}
+        body { margin:0; padding:0; min-height:100vh; overflow-x:hidden; font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif; background:#0D0D0D; color:#fff; display:flex; justify-content:center; }
+        .app { width: 390px; max-width:100vw; margin:0 auto; min-height:812px; position:relative; padding-bottom:80px; }
+        /* Header */
+        .header { padding:16px; padding-top:50px; background:linear-gradient(180deg,#1A0D1A,#0D0D0D); }
+        .header-top { display:flex; align-items:center; margin-bottom:16px; }
+        .header-back { font-size:22px; cursor:pointer; margin-right:12px; color:rgba(255,255,255,0.7); }
+        .header-title { font-size:20px; font-weight:700; }
+        .header-record { font-size:13px; color:rgba(255,255,255,0.5); cursor:pointer; }
+        /* Balance Card */
+        .balance-card { background:linear-gradient(135deg,#FF4D6D,#FF8FA3); border-radius:16px; padding:20px; margin:0 16px; }
+        .balance-label { font-size:13px; opacity:0.9; margin-bottom:8px; }
+        .balance-value { font-size:36px; font-weight:800; margin-bottom:16px; }
+        .balance-actions { display:flex; gap:12px; }
+        .balance-btn { flex:1; background:rgba(255,255,255,0.2); padding:12px; border-radius:10px; text-align:center; font-size:14px; font-weight:600; cursor:pointer; backdrop-filter:blur(10px); }
+        /* Tabs */
+        .tabs { display:flex; padding:20px 16px; gap:16px; }
+        .tab { flex:1; padding:12px; text-align:center; font-size:14px; color:rgba(255,255,255,0.5); cursor:pointer; background:#1A1A1A; border-radius:12px; transition:all 0.3s; }
+        .tab.active { background:#FF4D6D; color:#fff; font-weight:600; }
+        /* Recharge Section */
+        .recharge-section { padding:0 16px; }
+        .section-title { font-size:14px; color:rgba(255,255,255,0.5); margin-bottom:12px; }
+        .recharge-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+        .recharge-item { background:#1A1A1A; border-radius:12px; padding:16px 8px; text-align:center; cursor:pointer; transition:all 0.2s; border:2px solid transparent; }
+        .recharge-item:active { transform:scale(0.97); }
+        .recharge-item.active { border-color:#FF4D6D; background:rgba(255,77,109,0.1); }
+        .recharge-diamond { font-size:24px; margin-bottom:4px; }
+        .recharge-amount { font-size:16px; font-weight:700; margin-bottom:4px; }
+        .recharge-price { font-size:12px; color:#FFD700; }
+        .recharge-bonus { font-size:10px; color:#FF4D6D; margin-top:2px; }
+        /* Pay Methods */
+        .pay-section { padding:20px 16px; }
+        .pay-method { display:flex; align-items:center; gap:12px; background:#1A1A1A; border-radius:12px; padding:14px 16px; margin-bottom:8px; cursor:pointer; }
+        .pay-icon { font-size:28px; }
+        .pay-info { flex:1; }
+        .pay-name { font-size:14px; font-weight:600; }
+        .pay-desc { font-size:12px; color:rgba(255,255,255,0.4); margin-top:2px; }
+        .pay-radio { width:20px; height:20px; border:2px solid rgba(255,255,255,0.3); border-radius:50%; }
+        .pay-method.active .pay-radio { border-color:#FF4D6D; background:#FF4D6D; box-shadow:inset 0 0 0 4px #0D0D0D; }
+        /* Recharge Button */
+        .recharge-btn { margin:0 16px 20px; background:linear-gradient(135deg,#FF4D6D,#FF8FA3); padding:14px; border-radius:25px; text-align:center; font-size:16px; font-weight:700; cursor:pointer; }
+        /* Bottom Tab */
+        .bottom-tab { position:fixed; bottom:0; left:50%; transform:translateX(-50%); width:100%; width: 390px; height:64px; background:rgba(13,13,13,0.95); backdrop-filter:blur(10px); border-top:0.5px solid rgba(255,255,255,0.1); display:flex; justify-content:space-around; align-items:center; padding-bottom:8px; z-index:100; }
+        .tab-item { display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer; color:rgba(255,255,255,0.4); font-size:10px; transition:color 0.3s; }
+        .tab-item .tab-icon { font-size:22px; }
+        .tab-item.active { color:#FF4D6D; }

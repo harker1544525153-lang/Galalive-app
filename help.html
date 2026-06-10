@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 帮助与反馈</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif; background:#0D0D0D; color:#fff; min-height:100vh; }
+        .app { max-width:390px; margin:0 auto; min-height:100vh; position:relative; padding-bottom:80px; }
+        .header { padding:16px; padding-top:50px; display:flex; align-items:center; gap:12px; }
+        .back-btn { font-size:24px; cursor:pointer; }
+        .header-title { font-size:18px; font-weight:700; }
+        .menu-list { background:#1A1A1A; margin:0 16px 12px; border-radius:12px; overflow:hidden; }
+        .menu-item { display:flex; align-items:center; padding:14px 16px; cursor:pointer; border-bottom:0.5px solid rgba(255,255,255,0.05); }
+        .menu-item:last-child { border-bottom:none; }
+        .menu-icon { font-size:20px; width:32px; text-align:center; }
+        .menu-text { flex:1; font-size:14px; }
+        .menu-arrow { font-size:14px; color:rgba(255,255,255,0.3); }
+        .feedback-section { margin:0 16px; }
+        .feedback-area { width:100%; height:120px; background:#1A1A1A; border:none; border-radius:12px; color:#fff; padding:14px; font-size:14px; resize:none; margin-bottom:12px; }
+        .feedback-area::placeholder { color:rgba(255,255,255,0.3); }
+        .submit-btn { width:100%; height:44px; background:linear-gradient(135deg,#FF4D6D,#FF8FA3); border:none; border-radius:22px; color:#fff; font-size:15px; font-weight:600; cursor:pointer; }
+        .bottom-tab { position:fixed; bottom:0; left:50%; transform:translateX(-50%); width:100%; max-width:390px; height:64px; background:rgba(13,13,13,0.95); backdrop-filter:blur(10px); border-top:0.5px solid rgba(255,255,255,0.1); display:flex; justify-content:space-around; align-items:center; padding-bottom:8px; z-index:100; }
+        .tab-item { display:flex; flex-direction:column; align-items:center; gap:2px; cursor:pointer; color:rgba(255,255,255,0.4); font-size:10px; transition:color 0.3s; }
+        .tab-item .tab-icon { font-size:22px; }
+        .tab-item.active { color:#FF4D6D; }
+        .toast { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,0.8); color:#fff; padding:12px 24px; border-radius:8px; font-size:14px; opacity:0; transition:all 0.3s; pointer-events:none; z-index:1000; }
+        .toast.show { opacity:1; }
+    </style>
+</head>
+<body>
+<div class="app">
+    <div class="header">
+        <div class="back-btn" onclick="goBack()">←</div>
+        <div class="header-title">帮助与反馈</div>
+    </div>
+    <div class="menu-list">
+        <div class="menu-item" onclick="showToast('功能开发中...')">
+            <span class="menu-icon">📖</span>
+            <span class="menu-text">常见问题</span>
+            <span class="menu-arrow">›</span>
+        </div>
+        <div class="menu-item" onclick="showToast('功能开发中...')">
+            <span class="menu-icon">💬</span>
+            <span class="menu-text">在线客服</span>
+            <span class="menu-arrow">›</span>
+        </div>
+        <div class="menu-item" onclick="showToast('功能开发中...')">
+            <span class="menu-icon">📋</span>
+            <span class="menu-text">举报中心</span>
+            <span class="menu-arrow">›</span>
+        </div>
+    </div>
+    <div class="feedback-section">
+        <textarea class="feedback-area" placeholder="请描述您遇到的问题或建议..."></textarea>
+        <button class="submit-btn" onclick="showToast('感谢您的反馈！')">提交反馈</button>
+    </div>
+    <div class="toast" id="toast"></div>
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')"><span class="tab-icon">🏠</span>首页</div>
+        <div class="tab-item" onclick="navigate(this,'following.html')"><span class="tab-icon">❤</span>关注</div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')"><span class="tab-icon">💬</span>消息</div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')"><span class="tab-icon">👤</span>我的</div>
+    </div>
+</div>
+<script>
+    function showToast(msg) {
+        const t=document.getElementById('toast');
+        t.textContent=msg;
+        t.classList.add('show');
+        setTimeout(()=>t.classList.remove('show'),2000);
+    }
+    function goBack() { window.location.href = 'profile.html'; }
+    function navigate(el, page) {
+        document.querySelectorAll('.tab-item').forEach(t=>t.classList.remove('active'));
+        el.classList.add('active');
+        window.location.href = page;
+    }
+</script>
+</body>
+</html>

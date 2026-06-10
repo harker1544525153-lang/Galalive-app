@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 主播中心</title>
+        <link rel="stylesheet" href="css/host.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="back-btn" onclick="goBack()">←</div>
+            <div class="header-title">🎬 主播中心</div>
+            <div class="setting-btn">⚙️</div>
+        </div>
+    </div>
+
+    <!-- Host Profile -->
+    <div class="host-profile">
+        <div class="profile-card">
+            <div class="profile-row">
+                <div class="profile-avatar">🎤</div>
+                <div class="profile-info">
+                    <div class="profile-name">主播小美</div>
+                    <div class="profile-id">ID：12345678</div>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">128</div>
+                    <div class="stat-label">粉丝</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">56</div>
+                    <div class="stat-label">关注</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">2.5万</div>
+                    <div class="stat-label">钻石</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Grid -->
+    <div class="menu-grid">
+        <div class="menu-item" onclick="goStats()">
+            <div class="menu-icon">📊</div>
+            <div class="menu-text">直播数据</div>
+        </div>
+        <div class="menu-item" onclick="showToast('功能开发中~')">
+            <div class="menu-icon">💰</div>
+            <div class="menu-text">收益中心</div>
+        </div>
+        <div class="menu-item" onclick="goVerify()">
+            <div class="menu-icon">✅</div>
+            <div class="menu-text">实名认证</div>
+        </div>
+        <div class="menu-item" onclick="showToast('功能开发中~')">
+            <div class="menu-icon">🎁</div>
+            <div class="menu-text">礼物记录</div>
+        </div>
+    </div>
+
+    <!-- Quick Action -->
+    <div class="section">
+        <div class="section-title">快捷操作</div>
+        <div class="quick-actions">
+            <div class="quick-btn live" onclick="startLive()">
+                <div class="quick-icon">🎥</div>
+                <div class="quick-text">开始直播</div>
+            </div>
+            <div class="quick-btn" onclick="showToast('功能开发中~')">
+                <div class="quick-icon">📹</div>
+                <div class="quick-text">录制视频</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/host.js"></script>
+
+</body>
+</html>

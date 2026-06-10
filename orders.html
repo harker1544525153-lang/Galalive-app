@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 我的订单</title>
+        <link rel="stylesheet" href="css/orders.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="back-btn" onclick="goBack()">←</div>
+            <div class="header-title">📋 我的订单</div>
+            <div style="width:24px;"></div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this)">全部</div>
+        <div class="tab" onclick="switchTab(this)">充值</div>
+        <div class="tab" onclick="switchTab(this)">礼物</div>
+        <div class="tab" onclick="switchTab(this)">会员</div>
+    </div>
+
+    <!-- Order List -->
+    <div class="order-list">
+        <div class="order-item">
+            <div class="order-header">
+                <div class="order-title">钻石充值</div>
+                <div class="order-status">已完成</div>
+            </div>
+            <div class="order-content">
+                <div class="order-icon">💎</div>
+                <div class="order-info">
+                    <div class="order-name">60钻石充值</div>
+                    <div class="order-detail">订单号：202406061234567</div>
+                </div>
+            </div>
+            <div class="order-footer">
+                <div class="order-time">2024-06-06 14:30</div>
+                <div class="order-amount">¥6.00</div>
+            </div>
+        </div>
+
+        <div class="order-item">
+            <div class="order-header">
+                <div class="order-title">赠送礼物</div>
+                <div class="order-status">已完成</div>
+            </div>
+            <div class="order-content">
+                <div class="order-icon">🎁</div>
+                <div class="order-info">
+                    <div class="order-name">超级火箭 x1</div>
+                    <div class="order-detail">送给：主播小美</div>
+                </div>
+            </div>
+            <div class="order-footer">
+                <div class="order-time">2024-06-05 20:15</div>
+                <div class="order-amount">💎 520</div>
+            </div>
+        </div>
+
+        <div class="order-item">
+            <div class="order-header">
+                <div class="order-title">会员充值</div>
+                <div class="order-status">已完成</div>
+            </div>
+            <div class="order-content">
+                <div class="order-icon">⭐</div>
+                <div class="order-info">
+                    <div class="order-name">月度黄金会员</div>
+                    <div class="order-detail">有效期：2024-06-05至2024-07-05</div>
+                </div>
+            </div>
+            <div class="order-footer">
+                <div class="order-time">2024-06-05 10:00</div>
+                <div class="order-amount">¥29.90</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/orders.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 实名认证</title>
+        <link rel="stylesheet" href="css/verify.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="back-btn" onclick="goBack()">←</div>
+            <div class="header-title">✅ 实名认证</div>
+            <div style="width:24px;"></div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Status Card -->
+        <div class="status-card">
+            <div class="status-icon">🔐</div>
+            <div class="status-title">完成实名认证</div>
+            <div class="status-desc">为保障您的账号安全，首次开播前需要完成实名认证</div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-section">
+            <div class="form-group">
+                <label class="form-label">真实姓名</label>
+                <input type="text" class="form-input" placeholder="请输入您的真实姓名">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">身份证号</label>
+                <input type="text" class="form-input" placeholder="请输入您的身份证号码">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">身份证照片</label>
+                <div class="upload-section">
+                    <div class="upload-item" onclick="uploadFront()">
+                        <div class="upload-icon">📷</div>
+                        <div class="upload-text">人像面</div>
+                    </div>
+                    <div class="upload-item" onclick="uploadBack()">
+                        <div class="upload-icon">📷</div>
+                        <div class="upload-text">国徽面</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agreement -->
+        <div class="agreement">
+            <div class="checkbox" onclick="toggleCheck(this)"></div>
+            <div class="agreement-text">我已阅读并同意 <span class="agreement-link">《实名认证服务协议》</span> 和 <span class="agreement-link">《隐私政策》</span></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="submit-btn" onclick="submitVerify()">提交认证</button>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/verify.js"></script>
+
+</body>
+</html>

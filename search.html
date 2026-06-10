@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 搜索</title>
+        <link rel="stylesheet" href="css/search.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Search Bar -->
+    <div class="search-header">
+        <div class="search-bar">
+            <div class="search-input-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="搜索用户名/ID/直播间" id="searchInput">
+            </div>
+            <div class="search-cancel" onclick="goBack()">取消</div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this)">综合</div>
+        <div class="tab" onclick="switchTab(this)">用户</div>
+        <div class="tab" onclick="switchTab(this)">直播间</div>
+        <div class="tab" onclick="switchTab(this)">视频</div>
+    </div>
+
+    <!-- History Section -->
+    <div class="history-section" id="historySection">
+        <div class="history-header">
+            <div class="history-title">搜索历史</div>
+            <div class="history-clear" onclick="clearHistory()">清空</div>
+        </div>
+        <div class="history-tags">
+            <div class="history-tag" onclick="searchHistory('小红')">小红</div>
+            <div class="history-tag" onclick="searchHistory('小明')">小明</div>
+            <div class="history-tag" onclick="searchHistory('才艺主播')">才艺主播</div>
+            <div class="history-tag" onclick="searchHistory('游戏')">游戏</div>
+        </div>
+    </div>
+
+    <!-- Hot Search -->
+    <div class="hot-section" id="hotSection">
+        <div class="hot-title">🔥 热门搜索</div>
+        <div class="hot-item" onclick="searchHot('小红')">
+            <div class="hot-rank">1</div>
+            <div class="hot-content">
+                <div class="hot-text">小红</div>
+                <div class="hot-desc">人气女主播，直播间超热闹</div>
+            </div>
+            <div class="hot-tag">HOT</div>
+        </div>
+        <div class="hot-item" onclick="searchHot('才艺')">
+            <div class="hot-rank">2</div>
+            <div class="hot-content">
+                <div class="hot-text">才艺</div>
+                <div class="hot-desc">唱歌跳舞，才艺展示</div>
+            </div>
+        </div>
+        <div class="hot-item" onclick="searchHot('游戏')">
+            <div class="hot-rank">3</div>
+            <div class="hot-content">
+                <div class="hot-text">游戏</div>
+                <div class="hot-desc">热门游戏直播</div>
+            </div>
+        </div>
+        <div class="hot-item" onclick="searchHot('新人主播')">
+            <div class="hot-rank later">4</div>
+            <div class="hot-content">
+                <div class="hot-text">新人主播</div>
+                <div class="hot-desc">新加入的主播们</div>
+            </div>
+        </div>
+        <div class="hot-item" onclick="searchHot('聊天')">
+            <div class="hot-rank later">5</div>
+            <div class="hot-content">
+                <div class="hot-text">聊天</div>
+                <div class="hot-desc">轻松聊天互动</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results (Hidden by default) -->
+    <div class="results-section" id="resultsSection" style="display:none;">
+        <div class="result-item" onclick="goUser()">
+            <div class="result-avatar">🌺</div>
+            <div class="result-info">
+                <div class="result-name">小红 🌺</div>
+                <div class="result-id">ID: 10086</div>
+                <div class="result-desc">粉丝 12.5w · 获赞 85.2w</div>
+            </div>
+            <div class="result-live">直播中</div>
+        </div>
+        <div class="result-item" onclick="goUser()">
+            <div class="result-avatar">🎵</div>
+            <div class="result-info">
+                <div class="result-name">小明 🎵</div>
+                <div class="result-id">ID: 10087</div>
+                <div class="result-desc">粉丝 8.2w · 获赞 52.3w</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item active" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/search.js"></script>
+
+</body>
+</html>

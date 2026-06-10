@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 直播数据</title>
+        <link rel="stylesheet" href="css/stats.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="back-btn" onclick="goBack()">←</div>
+            <div class="header-title">📊 直播数据</div>
+            <div style="width:24px;"></div>
+        </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab(this)">今日</div>
+        <div class="tab" onclick="switchTab(this)">本周</div>
+        <div class="tab" onclick="switchTab(this)">本月</div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-value">12,580</div>
+            <div class="stat-label">钻石收益</div>
+            <div class="stat-trend up">↑ 23.5% 较昨日</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">1,256</div>
+            <div class="stat-label">观看人数</div>
+            <div class="stat-trend up">↑ 12.3% 较昨日</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">2.5小时</div>
+            <div class="stat-label">直播时长</div>
+            <div class="stat-trend down">↓ 5.2% 较昨日</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">568</div>
+            <div class="stat-label">新增关注</div>
+            <div class="stat-trend up">↑ 45.6% 较昨日</div>
+        </div>
+    </div>
+
+    <!-- Top Fans -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title">粉丝贡献榜</div>
+            <div class="section-more">更多</div>
+        </div>
+        <div class="list-item">
+            <div class="item-left">
+                <div class="item-avatar">🥇</div>
+                <div class="item-info">
+                    <div class="item-name">钻石用户</div>
+                    <div class="item-desc">送了超级火箭</div>
+                </div>
+            </div>
+            <div class="item-value">💎 5,200</div>
+        </div>
+        <div class="list-item">
+            <div class="item-left">
+                <div class="item-avatar">🥈</div>
+                <div class="item-info">
+                    <div class="item-name">黄金用户</div>
+                    <div class="item-desc">送了火箭</div>
+                </div>
+            </div>
+            <div class="item-value">💎 2,500</div>
+        </div>
+        <div class="list-item">
+            <div class="item-left">
+                <div class="item-avatar">🥉</div>
+                <div class="item-info">
+                    <div class="item-name">白银用户</div>
+                    <div class="item-desc">送了飞机</div>
+                </div>
+            </div>
+            <div class="item-value">💎 1,200</div>
+        </div>
+    </div>
+
+    <!-- Recent Live -->
+    <div class="section">
+        <div class="section-header">
+            <div class="section-title">最近直播</div>
+            <div class="section-more">更多</div>
+        </div>
+        <div class="list-item">
+            <div class="item-left">
+                <div class="item-avatar">🎥</div>
+                <div class="item-info">
+                    <div class="item-name">新人开播求关注</div>
+                    <div class="item-desc">今天 14:00 · 2.5小时</div>
+                </div>
+            </div>
+            <div class="item-value">👥 568</div>
+        </div>
+        <div class="list-item">
+            <div class="item-left">
+                <div class="item-avatar">🎥</div>
+                <div class="item-info">
+                    <div class="item-name">唱歌聊天</div>
+                    <div class="item-desc">昨天 20:00 · 3小时</div>
+                </div>
+            </div>
+            <div class="item-value">👥 1,024</div>
+        </div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'ranking.html')">
+            <span class="tab-icon">🏆</span>
+            排行
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/stats.js"></script>
+
+</body>
+</html>

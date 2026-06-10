@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 小视频</title>
+        <link rel="stylesheet" href="css/short-video.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-tabs">
+            <div class="top-tab" onclick="switchTopTab(this)">关注</div>
+            <div class="top-tab active" onclick="switchTopTab(this)">推荐</div>
+        </div>
+        <div class="publish-btn" onclick="publishVideo()">+</div>
+    </div>
+
+    <!-- Video Container -->
+    <div class="video-container">
+        <div class="video-slide" onclick="togglePlay()">
+            <div class="video-placeholder">
+                <span class="video-tag">🎬</span>
+            </div>
+            <!-- Music -->
+            <div class="music-info">
+                <div class="music-icon">🎵</div>
+                <div class="music-name">热门背景音乐 - 节奏感很强</div>
+            </div>
+            <!-- User Info -->
+            <div class="user-info">
+                <div class="user-name">
+                    @小红 🌺
+                </div>
+                <div class="user-desc">分享一个有趣的视频～喜欢的话点个赞吧！评论区告诉我你想看什么内容👇</div>
+                <div class="follow-btn" onclick="toggleFollow(event)">+ 关注</div>
+            </div>
+            <!-- Side Actions -->
+            <div class="side-actions">
+                <div class="action-item" onclick="toggleLike(this)">
+                    <div class="action-icon">❤</div>
+                    <div class="action-text">12.5w</div>
+                </div>
+                <div class="action-item" onclick="showComments()">
+                    <div class="action-icon">💬</div>
+                    <div class="action-text">2,356</div>
+                </div>
+                <div class="action-item" onclick="shareVideo()">
+                    <div class="action-icon">↗</div>
+                    <div class="action-text">分享</div>
+                </div>
+                <div class="action-item" onclick="togglePlay()">
+                    <div class="action-icon">▶</div>
+                    <div class="action-text">播放</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Indicator -->
+    <div class="video-dots">
+        <div class="video-dot active"></div>
+        <div class="video-dot"></div>
+        <div class="video-dot"></div>
+        <div class="video-dot"></div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'short-video.html')">
+            <span class="tab-icon">🎬</span>
+            视频
+        </div>
+        <div class="tab-item" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+        </div>
+        <div class="tab-item" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/short-video.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 登录</title>
+        <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo">G</div>
+        <div class="brand">GALA LIVE</div>
+        <div class="subtitle">欢迎来到直播平台</div>
+
+        <div class="input-group">
+            <label>手机号</label>
+            <div class="input-wrapper">
+                <span class="icon">📱</span>
+                <input type="tel" id="phone" placeholder="请输入手机号" maxlength="11">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>验证码</label>
+            <div class="code-row">
+                <div class="input-wrapper">
+                    <span class="icon">🔐</span>
+                    <input type="text" id="code" placeholder="请输入验证码" maxlength="6">
+                </div>
+                <button class="code-btn" id="getCodeBtn" disabled>获取验证码</button>
+            </div>
+        </div>
+
+        <div class="agreement">
+            <input type="checkbox" id="agree">
+            <label for="agree">已阅读并同意 <a href="#">《用户协议》</a> 和 <a href="#">《隐私政策》</a></label>
+        </div>
+
+        <button class="login-btn" id="loginBtn" disabled>登录 / 注册</button>
+
+        <div class="divider">其他登录方式</div>
+
+        <div class="social-login">
+            <button class="social-btn" onclick="showToast('Google登录')">G</button>
+            <button class="social-btn" onclick="showToast('Facebook登录')">f</button>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">遇到问题?</a>
+            <a href="#">使用密码登录</a>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+        <script src="js/index.js"></script>
+
+</body>
+</html>

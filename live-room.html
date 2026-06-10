@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 直播间</title>
+        <link rel="stylesheet" href="css/live-room.css">
+
+</head>
+<body>
+<div class="live-room">
+    <!-- Video Area -->
+    <div class="video-area">
+        <div class="placeholder">▶ 直播画面预览</div>
+    </div>
+
+    <!-- Top Overlay -->
+    <div class="top-overlay">
+        <div class="back-btn" onclick="goBack()">‹</div>
+        <div class="host-info">
+            <div class="host-avatar">红</div>
+            <div class="host-detail">
+                <div class="host-name">🌺 小红 <span class="crown">👑</span></div>
+                <div class="host-viewers">👁 12.5k 观看</div>
+            </div>
+        </div>
+        <button class="follow-btn" id="followBtn" onclick="toggleFollow()">+ 关注</button>
+        <div class="more-btn" onclick="showToast('更多')">⋯</div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-area" id="chatArea">
+        <div class="system-msg">🎉 小红 进入了直播间</div>
+        <div class="system-msg">🎉 小明 进入了直播间</div>
+        <div class="chat-msg"><span class="name">用户A</span>: 主播好漂亮~</div>
+        <div class="chat-msg"><span class="name host">👑 小红</span>: 欢迎大家来到我的直播间！</div>
+        <div class="chat-msg"><span class="name">用户C</span>: 666666</div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <div class="actions">
+            <div class="action-btn" title="观众列表">👥</div>
+            <div class="action-btn" title="礼物" onclick="toggleGift()">🎁</div>
+            <div class="action-btn" title="点赞" onclick="showToast('❤ 已点赞')">❤</div>
+            <div class="action-btn" title="更多">⋮</div>
+        </div>
+        <div class="input-area">
+            <span class="mode" onclick="toggleMode()">💬 消息</span>
+            <input type="text" id="msgInput" placeholder="说点什么..." onkeydown="if(event.key==='Enter') sendMsg()">
+            <div class="send" onclick="sendMsg()">➤</div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleGift()"></div>
+
+    <!-- Gift Panel -->
+    <div class="gift-panel" id="giftPanel">
+        <div class="gift-header">
+            <span class="diam">💎 我的钻石: 1,000</span>
+            <span class="recharge">充值 ></span>
+        </div>
+        <div class="gift-grid">
+            <div class="gift-item selected" onclick="selectGift(this,'❤',1)">
+                <div class="gift-icon">❤</div>
+                <div class="gift-name">小心心</div>
+                <div class="gift-price">1💎</div>
+            </div>
+            <div class="gift-item" onclick="selectGift(this,'🌹',10)">
+                <div class="gift-icon">🌹</div>
+                <div class="gift-name">玫瑰</div>
+                <div class="gift-price">10💎</div>
+            </div>
+            <div class="gift-item" onclick="selectGift(this,'🎁',100)">
+                <div class="gift-icon">🎁</div>
+                <div class="gift-name">礼盒</div>
+                <div class="gift-price">100💎</div>
+            </div>
+            <div class="gift-item" onclick="selectGift(this,'🚀',1000)">
+                <div class="gift-icon">🚀</div>
+                <div class="gift-name">火箭</div>
+                <div class="gift-price">1,000💎</div>
+            </div>
+            <div class="gift-item" onclick="selectGift(this,'🏆',5000)">
+                <div class="gift-icon">🏆</div>
+                <div class="gift-name">奖杯</div>
+                <div class="gift-price">5,000💎</div>
+            </div>
+        </div>
+        <div class="gift-bottom">
+            <button class="combo-btn" onclick="setCombo(this,'×10')">×10</button>
+            <button class="combo-btn" onclick="setCombo(this,'×66')">×66</button>
+            <button class="combo-btn" onclick="setCombo(this,'×99')">×99</button>
+            <button class="send-gift" onclick="sendGift()">🎁 赠送</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+</div>
+
+    <script src="js/live-room.js"></script>
+
+</body>
+</html>

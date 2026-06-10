@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>GALA LIVE - 消息</title>
+        <link rel="stylesheet" href="css/messages.css">
+
+</head>
+<body>
+<div class="app">
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="action" onclick="showToast('搜索消息')">🔍</div>
+        <div class="title">消息</div>
+        <div class="action" onclick="showToast('消息设置')">⚙</div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="msg-tabs">
+        <span class="msg-tab active" onclick="switchMsgTab(this,'all')">全部消息</span>
+        <span class="msg-tab" onclick="switchMsgTab(this,'private')">私信</span>
+        <span class="msg-tab" onclick="switchMsgTab(this,'system')">系统通知</span>
+        <span class="msg-tab" onclick="switchMsgTab(this,'mention')">@ 提及</span>
+        <span class="msg-tab" onclick="switchMsgTab(this,'like')">点赞</span>
+    </div>
+
+    <!-- Message List -->
+    <div class="msg-list" id="msgList">
+        <!-- System Message -->
+        <div class="msg-item system-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#FF4D6D,#FF8FA3);">📢</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">系统通知</span>
+                    <span class="time">刚刚</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="preview">📌 您的实名认证已通过，快来开启直播之旅吧！</span>
+                    <span class="badge">2</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Message 1 -->
+        <div class="msg-item user-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#FF4D6D,#FF8FA3);">红</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">🌺 小红</span>
+                    <span class="vip-tag">主播</span>
+                    <span class="time">10:25</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="preview">谢谢宝贝送的火箭🚀，爱你么么哒~</span>
+                    <span class="badge">3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Message 2 -->
+        <div class="msg-item user-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#7B2CBF,#00D9FF);">小</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">🎵 小明</span>
+                    <span class="time">昨天</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="preview">今晚8点有演出，记得来看哦！</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Message 3 -->
+        <div class="msg-item user-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#2A1A2A,#1A1A2E);">🎮</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">🎮 小芳</span>
+                    <span class="time">昨天</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="preview">开黑吗？我打野贼6</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Message 4 (Pinned) -->
+        <div class="msg-item user-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#1A2A1A,#0D1A0D);">🎸</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">🎸 阿杰</span>
+                    <span class="time">周三</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="pin-icon">📌</span>
+                    <span class="preview">新写了一首歌，帮我听听看？</span>
+                    <span class="badge">1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Message 5 -->
+        <div class="msg-item user-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#1A1A2A,#0D0D1A);">月</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">👑 小月</span>
+                    <span class="vip-tag">主播</span>
+                    <span class="time">周二</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="preview">感谢关注，互关一下呗~</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Notification 2 -->
+        <div class="msg-item system-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#FFD700,#FF8FA3);">🎉</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">活动通知</span>
+                    <span class="time">周一</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="preview">🎊 「夏日狂欢」活动火热进行中，送礼物赢大奖！</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Like Notification -->
+        <div class="msg-item system-msg-item">
+            <div class="msg-avatar" style="background:linear-gradient(135deg,#FF4D6D,#FF8FA3);">❤</div>
+            <div class="msg-content">
+                <div class="top-row">
+                    <span class="name">点赞通知</span>
+                    <span class="time">周一</span>
+                </div>
+                <div class="bottom-row">
+                    <span class="preview">小红、小明等 12 人赞了您的直播</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Empty State (hidden by default) -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+        <div class="icon">💬</div>
+        <div class="text">暂无消息</div>
+        <div class="sub">当有新的消息时会在这里显示</div>
+    </div>
+
+    <!-- Bottom Tab -->
+    <div class="bottom-tab">
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">🏠</span>
+            首页
+        </div>
+        <div class="tab-item" onclick="navigate(this,'home.html')">
+            <span class="tab-icon">❤</span>
+            关注
+        </div>
+        <div class="tab-item active" onclick="navigate(this,'messages.html')">
+            <span class="tab-icon">💬</span>
+            消息
+            <span class="badge"></span>
+        </div>
+        <div class="tab-item" onclick="navigate(this,'profile.html')">
+            <span class="tab-icon">👤</span>
+            我的
+        </div>
+    </div>
+</div>
+
+    <script src="js/messages.js"></script>
+
+</body>
+</html>
